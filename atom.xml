@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://example.com</id>
-    <title>Coding之旅1</title>
+    <title>Coding之旅</title>
     <link href="http://example.com" />
     <updated>2025-02-28T07:52:15.000Z</updated>
     <entry>
