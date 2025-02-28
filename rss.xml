@@ -5,8 +5,15 @@
         <link>http://example.com</link>
         <description>JAVA</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 28 Feb 2025 15:52:15 +0800</pubDate>
-        <lastBuildDate>Fri, 28 Feb 2025 15:52:15 +0800</lastBuildDate>
+        <pubDate>Sat, 01 Mar 2025 00:47:45 +0800</pubDate>
+        <lastBuildDate>Sat, 01 Mar 2025 00:47:45 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">http://example.com/2025/03/01/test1/</guid>
+            <title>test1</title>
+            <link>http://example.com/2025/03/01/test1/</link>
+            <pubDate>Sat, 01 Mar 2025 00:47:45 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2025/02/28/test/</guid>
             <title>test</title>
