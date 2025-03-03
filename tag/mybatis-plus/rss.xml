@@ -1,19 +1,25 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
-    <title>Coding之旅 • Posts by &#34;java&#34; tag</title>
-    <link href="http://example.com" />
-    <updated>2025-03-03T13:40:28.000Z</updated>
-    <category term="java" />
-    <category term="优化" />
-    <category term="Markdown" />
-    <category term="字符串" />
-    <category term="mybatis-plus" />
-    <entry>
-        <id>http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/</id>
-        <title>mybatis-plus逻辑删除字段为is_active</title>
-        <link rel="alternate" href="http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/"/>
-        <content type="html">&lt;h1 id=&#34;全局配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局配置&#34;&gt;#&lt;/a&gt; 全局配置&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title>Coding之旅 • Posts by &#34;mybatis-plus&#34; tag</title>
+        <link>http://example.com</link>
+        <description>JAVA</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 03 Mar 2025 21:40:28 +0800</pubDate>
+        <lastBuildDate>Mon, 03 Mar 2025 21:40:28 +0800</lastBuildDate>
+        <category>java</category>
+        <category>优化</category>
+        <category>Markdown</category>
+        <category>字符串</category>
+        <category>mybatis-plus</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/</guid>
+            <title>mybatis-plus逻辑删除字段为is_active</title>
+            <link>http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/</link>
+            <category>java</category>
+            <category>mybatis-plus</category>
+            <pubDate>Mon, 03 Mar 2025 21:40:28 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;全局配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局配置&#34;&gt;#&lt;/a&gt; 全局配置&lt;/h1&gt;
 &lt;p&gt;在  &lt;code&gt;application.yml&lt;/code&gt;  中配置逻辑删除字段及其值：&lt;/p&gt;
 &lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;mybatis-plus:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;global-config:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;db-config:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-delete-field:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;is_active&lt;/span&gt;  &lt;span class=&#34;comment&#34;&gt;# 指定逻辑删除字段&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-delete-value:&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;comment&#34;&gt;# 已删除的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-not-delete-value:&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;comment&#34;&gt;# 未删除的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;实体类注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实体类注解&#34;&gt;#&lt;/a&gt; 实体类注解&lt;/h1&gt;
@@ -23,33 +29,7 @@
 &lt;li&gt;&lt;code&gt;value = &amp;quot;1&amp;quot;&lt;/code&gt;  表示未删除时的值。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;delval = &amp;quot;0&amp;quot;&lt;/code&gt;  表示已删除时的值。&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-        <category term="java" />
-        <category term="mybatis-plus" />
-        <updated>2025-03-03T13:40:28.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://example.com/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</id>
-        <title>java代码优化</title>
-        <link rel="alternate" href="http://example.com/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/"/>
-        <content type="html">&lt;h1 id=&#34;字符串优化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串优化&#34;&gt;#&lt;/a&gt; 字符串优化&lt;/h1&gt;
-&lt;p&gt;1. 针对于 final 修饰类、方法、基本数据类型、引用数据类型的量的结构时，能使用上 final 的时候建议使用上。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;字符串拼接操作不一定使用的是 StringBuilder!&lt;br&gt;
- 如果拼接符号左右两边都是字符串常量或常量引用，则仍然使用编译期优化，即非 StringBuilder 的方式。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;2.StringBuilder 的 append () 的方式：自始至终中只创建过一个 StringBuilder 的对象&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;使用 String 的字符串拼接方式：创建过多个 StringBuilder 和 String 的对象&lt;br&gt;
-使用 String 的字符串拼接方式：内存中由于创建了较多的 StringBuilder 和 String 的对象，内存占用更大；如果进行 GC，需要花费额外的时间。&lt;br&gt;
-体会执行效率：通过 StringBuilder 的 append () 的方式添加字符串的效率要远高于使用 String 的字符串拼接方式！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;3. 改进的空间：在实际开发中，如果基本确定要前前后后添加的字符串长度不高于某个限定值 highLevel 的情况下，建议使用构造器实例化：&lt;/p&gt;
-&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;StringBuilder&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;StringBuilder&lt;/span&gt;(highLevel);&lt;span class=&#34;comment&#34;&gt;//new char[highLevel]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-        <category term="java" />
-        <category term="优化" />
-        <category term="字符串" />
-        <updated>2025-03-01T02:05:43.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>
