@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?277379"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?251064"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?812355"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?515920"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?550282"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?371541"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?871723"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?237001"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?301345"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?367207"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?307431"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?963905"></li>
         </ul>
       </div>
     </header>
@@ -121,7 +121,81 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" itemprop="url" title="java代码优化"><img data-src="http://www.98qy.com/sjbz/api.php?635559"></a>
+    <a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url" title="Markdown基本操作"><img data-src="http://www.98qy.com/sjbz/api.php?797637"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2025-03-03 16:22:14">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2025-03-03T16:22:14+08:00">2025-03-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url" title="Markdown基本操作">Markdown基本操作</a></h3>
+    <div class="excerpt">
+        # 块级元素
+# 标题
+123456# 标题1## 标题2### 标题3#### 标题4##### 标题5###### 标题6
+# 标题 1
+# 标题 2
+# 标题 3
+# 标题 4
+# 标题 5
+# 标题 6
+
+# 引用
+1&amp;gt;这是一段话
+
+这是一段话
+
+# 有序列表
+1234把大象放进冰箱1.打开冰箱2.把大象塞进去3.关上冰箱
+把大象放进冰箱
+1. 打开冰箱
+2. 把大象塞进去
+3. 关上冰箱
+
+# 无序列表
+1234- 阿斯蒂芬- 寒风呼呼* 达芬奇* 贝多芬
+
+阿斯蒂芬
+寒风呼呼
+
+达芬奇
+贝多芬
+
+# 任务列表
+1234明天要做的事：- [x] 吃饭- [ ] 睡觉-...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" title="工具"><i class="ic i-flag"></i>工具</a>
+      </span>
+    </div>
+    <a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url" title="Markdown基本操作" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" itemprop="url" title="java代码优化"><img data-src="http://www.98qy.com/sjbz/api.php?105362"></a>
   </div>
   <div class="info">
     
@@ -136,7 +210,7 @@
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>0</span>
+    <span>512</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -149,7 +223,16 @@
 
     <h3><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" itemprop="url" title="java代码优化">java代码优化</a></h3>
     <div class="excerpt">
-        
+        # 字符串优化
+1. 针对于 final 修饰类、方法、基本数据类型、引用数据类型的量的结构时，能使用上 final 的时候建议使用上。
+
+字符串拼接操作不一定使用的是 StringBuilder!
+如果拼接符号左右两边都是字符串常量或常量引用，则仍然使用编译期优化，即非 StringBuilder 的方式。
+
+2.StringBuilder 的 append () 的方式：自始至终中只创建过一个 StringBuilder 的对象
+
+使用 String 的字符串拼接方式：创建过多个 StringBuilder 和 String 的对象
+使用 String...
     </div>
     <div class="meta footer">
       <span>
@@ -190,19 +273,19 @@
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">1</span>
+        <span class="count">2</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">1</span>
+        <span class="count">2</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">2</span>
+        <span class="count">4</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -283,6 +366,16 @@
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/%E5%B7%A5%E5%85%B7/" title="分类于 工具">工具</a>
+</div>
+
+    <span><a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="Markdown基本操作">Markdown基本操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/java/" title="分类于 java">java</a>
 </div>
 
@@ -311,13 +404,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">0k 字</span>
+    <span title="站点总字数">2k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

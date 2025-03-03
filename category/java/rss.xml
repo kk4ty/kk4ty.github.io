@@ -9,16 +9,30 @@
         <lastBuildDate>Sat, 01 Mar 2025 10:05:43 +0800</lastBuildDate>
         <category>java</category>
         <category>优化</category>
+        <category>Markdown</category>
+        <category>字符串</category>
         <item>
             <guid isPermalink="true">http://example.com/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</guid>
             <title>java代码优化</title>
             <link>http://example.com/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</link>
             <category>java</category>
             <category>优化</category>
+            <category>字符串</category>
             <pubDate>Sat, 01 Mar 2025 10:05:43 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;字符串优化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串优化&#34;&gt;#&lt;/a&gt; 字符串优化&lt;/h1&gt;
+&lt;p&gt;1. 针对于 final 修饰类、方法、基本数据类型、引用数据类型的量的结构时，能使用上 final 的时候建议使用上。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;字符串拼接操作不一定使用的是 StringBuilder!&lt;br&gt;
+ 如果拼接符号左右两边都是字符串常量或常量引用，则仍然使用编译期优化，即非 StringBuilder 的方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2.StringBuilder 的 append () 的方式：自始至终中只创建过一个 StringBuilder 的对象&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 String 的字符串拼接方式：创建过多个 StringBuilder 和 String 的对象&lt;br&gt;
+使用 String 的字符串拼接方式：内存中由于创建了较多的 StringBuilder 和 String 的对象，内存占用更大；如果进行 GC，需要花费额外的时间。&lt;br&gt;
+体会执行效率：通过 StringBuilder 的 append () 的方式添加字符串的效率要远高于使用 String 的字符串拼接方式！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;3. 改进的空间：在实际开发中，如果基本确定要前前后后添加的字符串长度不高于某个限定值 highLevel 的情况下，建议使用构造器实例化：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;StringBuilder&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;StringBuilder&lt;/span&gt;(highLevel);&lt;span class=&#34;comment&#34;&gt;//new char[highLevel]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  ]]></description>
         </item>
     </channel>
