@@ -5,12 +5,29 @@
         <link>http://example.com</link>
         <description>JAVA</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 03 Mar 2025 16:22:14 +0800</pubDate>
-        <lastBuildDate>Mon, 03 Mar 2025 16:22:14 +0800</lastBuildDate>
+        <pubDate>Mon, 03 Mar 2025 21:40:28 +0800</pubDate>
+        <lastBuildDate>Mon, 03 Mar 2025 21:40:28 +0800</lastBuildDate>
         <category>java</category>
         <category>优化</category>
         <category>Markdown</category>
         <category>字符串</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/</guid>
+            <title>mybatis-plus逻辑删除字段为is_active</title>
+            <link>http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/</link>
+            <pubDate>Mon, 03 Mar 2025 21:40:28 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;全局配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局配置&#34;&gt;#&lt;/a&gt; 全局配置&lt;/h1&gt;
+&lt;p&gt;在  &lt;code&gt;application.yml&lt;/code&gt;  中配置逻辑删除字段及其值：&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;mybatis-plus:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;attr&#34;&gt;global-config:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attr&#34;&gt;db-config:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-delete-field:&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;is_active&lt;/span&gt;  &lt;span class=&#34;comment&#34;&gt;# 指定逻辑删除字段&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-delete-value:&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;comment&#34;&gt;# 已删除的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;attr&#34;&gt;logic-not-delete-value:&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;      &lt;span class=&#34;comment&#34;&gt;# 未删除的值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&#34;实体类注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实体类注解&#34;&gt;#&lt;/a&gt; 实体类注解&lt;/h1&gt;
+&lt;p&gt;在实体类中，使用  &lt;code&gt;@TableLogic&lt;/code&gt;  注解标记 i &lt;code&gt;s_active&lt;/code&gt;  字段：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; com.baomidou.mybatisplus.annotation.TableLogic;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;YourEntity&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;comment&#34;&gt;// 其他字段...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;meta&#34;&gt;@TableLogic(value = &amp;quot;1&amp;quot;, delval = &amp;quot;0&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; Integer isActive;  &lt;span class=&#34;comment&#34;&gt;// 对应数据库中的 is_active 字段&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;value = &amp;quot;1&amp;quot;&lt;/code&gt;  表示未删除时的值。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;delval = &amp;quot;0&amp;quot;&lt;/code&gt;  表示已删除时的值。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
             <title>Markdown基本操作</title>
