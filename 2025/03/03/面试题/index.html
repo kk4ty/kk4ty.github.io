@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="java,mybatis-plus" />
+  <meta name="keywords" content="java面试题" />
 
 
-<link rel="canonical" href="http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/">
+<link rel="canonical" href="http://example.com/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/">
 
 
 
   <title>
-mybatis-plus逻辑删除字段为is_active - java |
+面试题 - java |
 Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes me Lose</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,23 +60,23 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">mybatis-plus逻辑删除字段为is_active
+  <h1 itemprop="name headline">面试题
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2025-03-03 21:40:28">
+  <span class="item" title="创建时间：2025-03-03 22:55:48">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2025-03-03T21:40:28+08:00">2025-03-03</time>
+    <time itemprop="dateCreated datePublished" datetime="2025-03-03T22:55:48+08:00">2025-03-03</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>467</span>
+    <span>690</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?930451"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?135017"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?349867"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?264602"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?856773"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?462522"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?85591"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?161170"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?140756"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?144749"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?439332"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?233430"></li>
         </ul>
       </div>
     </header>
@@ -153,7 +153,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -168,20 +168,9 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="全局配置"><a class="markdownIt-Anchor" href="#全局配置">#</a> 全局配置</h1>
-<p>在  <code>application.yml</code>  中配置逻辑删除字段及其值：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">logic-delete-field:</span> <span class="string">is_active</span>  <span class="comment"># 指定逻辑删除字段</span></span><br><span class="line">      <span class="attr">logic-delete-value:</span> <span class="number">0</span>          <span class="comment"># 已删除的值</span></span><br><span class="line">      <span class="attr">logic-not-delete-value:</span> <span class="number">1</span>      <span class="comment"># 未删除的值</span></span><br></pre></td></tr></table></figure>
-<h1 id="实体类注解"><a class="markdownIt-Anchor" href="#实体类注解">#</a> 实体类注解</h1>
-<p>在实体类中，使用  <code>@TableLogic</code>  注解标记 i <code>s_active</code>  字段：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableLogic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">YourEntity</span> &#123;</span><br><span class="line">    <span class="comment">// 其他字段...</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@TableLogic(value = &quot;1&quot;, delval = &quot;0&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer isActive;  <span class="comment">// 对应数据库中的 is_active 字段</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>value = &quot;1&quot;</code>  表示未删除时的值。</li>
-<li><code>delval = &quot;0&quot;</code>  表示已删除时的值。</li>
-</ul>
-
+    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 题目：</span></span><br><span class="line"><span class="comment"> * new String(&quot;ab&quot;)会创建几个对象？看字节码，就知道是两个。</span></span><br><span class="line"><span class="comment"> *     一个对象是：new关键字在堆空间创建的</span></span><br><span class="line"><span class="comment"> *     另一个对象是：字符串常量池中的对象&quot;ab&quot;。 字节码指令：ldc</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 思考：</span></span><br><span class="line"><span class="comment"> * new String(&quot;a&quot;) + new String(&quot;b&quot;)呢？</span></span><br><span class="line"><span class="comment"> *  对象1：new StringBuilder()</span></span><br><span class="line"><span class="comment"> *  对象2： new String(&quot;a&quot;)</span></span><br><span class="line"><span class="comment"> *  对象3： 常量池中的&quot;a&quot;</span></span><br><span class="line"><span class="comment"> *  对象4： new String(&quot;b&quot;)</span></span><br><span class="line"><span class="comment"> *  对象5： 常量池中的&quot;b&quot;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  深入剖析： StringBuilder的toString():</span></span><br><span class="line"><span class="comment"> *      对象6 ：new String(&quot;ab&quot;)</span></span><br><span class="line"><span class="comment"> *       强调一下，toString()的调用，在字符串常量池中，没有生成&quot;ab&quot;</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shkstart  shkstart@126.com</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020  20:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringNewTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"><span class="comment">//        String str = new String(&quot;ab&quot;);</span></span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;a&quot;</span>) + <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;b&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       <div class="tags">
-          <a href="/tags/java/" rel="tag"><i class="ic i-tag"></i> java</a>
-          <a href="/tags/mybatis-plus/" rel="tag"><i class="ic i-tag"></i> mybatis-plus</a>
+          <a href="/tags/java%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="tag"><i class="ic i-tag"></i> java面试题</a>
       </div>
   </div>
 
@@ -193,7 +182,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2025-03-03 22:03:15" itemprop="dateModified" datetime="2025-03-03T22:03:15+08:00">2025-03-03</time>
+    <time title="修改时间：2025-03-03 22:57:14" itemprop="dateModified" datetime="2025-03-03T22:57:14+08:00">2025-03-03</time>
   </span>
 </div>
 
@@ -229,7 +218,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" title="mybatis-plus逻辑删除字段为is_active">http://example.com/2025/03/03/mybatis-plus逻辑删除字段为is-active/</a>
+    <a href="http://example.com/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="面试题">http://example.com/2025/03/03/面试题/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -248,22 +237,14 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
     <div class="item left">
       
 
-  <a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?413564" title="Markdown基本操作">
+  <a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?239262" title="mybatis-plus逻辑删除字段为is_active">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> 工具</span>
-  <h3>Markdown基本操作</h3>
+  <span class="category"><i class="ic i-flag"></i> java</span>
+  <h3>mybatis-plus逻辑删除字段为is_active</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?311694" title="面试题">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> java</span>
-  <h3>面试题</h3>
-  </a>
-
     </div>
 </div>
 
@@ -280,11 +261,10 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text"> 全局配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E7%B1%BB%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text"> 实体类注解</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" rel="bookmark" title="java代码优化">java代码优化</a></li><li class="active"><a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" rel="bookmark" title="mybatis-plus逻辑删除字段为is_active">mybatis-plus逻辑删除字段为is_active</a></li><li><a href="/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="bookmark" title="面试题">面试题</a></li>
+          <li><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" rel="bookmark" title="java代码优化">java代码优化</a></li><li><a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" rel="bookmark" title="mybatis-plus逻辑删除字段为is_active">mybatis-plus逻辑删除字段为is_active</a></li><li class="active"><a href="/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="bookmark" title="面试题">面试题</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -367,12 +347,10 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2025/03/03/Markdown%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2025/03/03/%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -397,7 +375,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 <a href="/categories/java/" title="分类于 java">java</a>
 </div>
 
-    <span><a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" title="mybatis-plus逻辑删除字段为is_active">mybatis-plus逻辑删除字段为is_active</a></span>
+    <span><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" title="java代码优化">java代码优化</a></span>
   </li>
 
       
@@ -417,7 +395,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 <a href="/categories/java/" title="分类于 java">java</a>
 </div>
 
-    <span><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" title="java代码优化">java代码优化</a></span>
+    <span><a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" title="mybatis-plus逻辑删除字段为is_active">mybatis-plus逻辑删除字段为is_active</a></span>
   </li>
 
       
@@ -470,7 +448,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2025/03/03/mybatis-plus逻辑删除字段为is-active/',
+    path: '2025/03/03/面试题/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
