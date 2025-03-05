@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Coding之旅 • All posts by \"lombok\" category",
+    "description": "JAVA",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/",
+            "url": "http://example.com/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/",
+            "title": "注解Builder踩坑",
+            "date_published": "2025-03-05T11:22:38.000Z",
+            "content_html": "<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JlbG9uZ3RvY29kZS9hcnRpY2xlL2RldGFpbHMvMTA5NTgzMDUz\">Lombok 的 @Builder 注解带来的两大坑</span></p>\n",
+            "tags": [
+                "java"
+            ]
+        }
+    ]
+}
