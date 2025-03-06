@@ -5,6 +5,14 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2025/03/06/%E8%B8%A9%E5%9D%91/",
+            "url": "http://example.com/2025/03/06/%E8%B8%A9%E5%9D%91/",
+            "title": "踩坑",
+            "date_published": "2025-03-06T02:09:08.000Z",
+            "content_html": "<p>1. 忘记读到 buf 数组。</p>\n<figure class=\"highlight java\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"type\">byte</span>[] buf = <span class=\"keyword\">new</span> <span class=\"title class_\">byte</span>[<span class=\"number\">1024</span>];</span><br><span class=\"line\"><span class=\"type\">int</span> <span class=\"variable\">len</span> <span class=\"operator\">=</span> <span class=\"number\">0</span>;</span><br><span class=\"line\"><span class=\"keyword\">while</span> ((len = inputStream.read(buf)) != -<span class=\"number\">1</span>) &#123;</span><br><span class=\"line\">  out.write(buf, <span class=\"number\">0</span>, len);</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n<p>2. 压缩包下载确保流的关闭，否则压缩包无法打开。<br>\n3. 输出流可以 flush 刷新一下，确保文件全部写入。</p>\n",
+            "tags": []
+        },
+        {
             "id": "http://example.com/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/",
             "url": "http://example.com/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/",
             "title": "注解Builder踩坑",
