@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://example.com</id>
+    <title>Coding之旅 • Posts by &#34;问题&#34; category</title>
+    <link href="http://example.com" />
+    <updated>2025-03-06T10:52:36.000Z</updated>
+    <category term="java" />
+    <category term="优化" />
+    <category term="Markdown" />
+    <category term="字符串" />
+    <category term="mybatis-plus" />
+    <category term="java面试题" />
+    <category term="踩坑" />
+    <category term="软件" />
+    <category term="app" />
+    <entry>
+        <id>http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/</id>
+        <title>软件问题</title>
+        <link rel="alternate" href="http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;微信：pc 端登录无法加载（关闭防火墙）&lt;/p&gt;
+</content>
+        <category term="软件" />
+        <category term="app" />
+        <updated>2025-03-06T10:52:36.000Z</updated>
+    </entry>
+</feed>

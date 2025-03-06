@@ -10,6 +10,9 @@
     <category term="字符串" />
     <category term="mybatis-plus" />
     <category term="java面试题" />
+    <category term="踩坑" />
+    <category term="软件" />
+    <category term="app" />
     <entry>
         <id>http://example.com/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/</id>
         <title>注解Builder踩坑</title>

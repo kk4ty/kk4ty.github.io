@@ -3,13 +3,26 @@
     <id>http://example.com</id>
     <title>Coding之旅</title>
     <link href="http://example.com" />
-    <updated>2025-03-06T02:09:08.000Z</updated>
+    <updated>2025-03-06T10:52:36.000Z</updated>
     <category term="java" />
     <category term="优化" />
     <category term="Markdown" />
     <category term="字符串" />
     <category term="mybatis-plus" />
     <category term="java面试题" />
+    <category term="踩坑" />
+    <category term="软件" />
+    <category term="app" />
+    <entry>
+        <id>http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/</id>
+        <title>软件问题</title>
+        <link rel="alternate" href="http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;微信：pc 端登录无法加载（关闭防火墙）&lt;/p&gt;
+</content>
+        <category term="软件" />
+        <category term="app" />
+        <updated>2025-03-06T10:52:36.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2025/03/06/%E8%B8%A9%E5%9D%91/</id>
         <title>踩坑</title>
@@ -26,6 +39,8 @@
 8.postman 传 json 空格不同问题。&lt;br&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=&#34;&gt;空格、NBSP 造成的 JSON 解析失败问题&lt;/span&gt;&lt;/p&gt;
 </content>
+        <category term="java" />
+        <category term="踩坑" />
         <updated>2025-03-06T02:09:08.000Z</updated>
     </entry>
     <entry>

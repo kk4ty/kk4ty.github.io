@@ -5,18 +5,33 @@
         <link>http://example.com</link>
         <description>JAVA</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 06 Mar 2025 10:09:08 +0800</pubDate>
-        <lastBuildDate>Thu, 06 Mar 2025 10:09:08 +0800</lastBuildDate>
+        <pubDate>Thu, 06 Mar 2025 18:52:36 +0800</pubDate>
+        <lastBuildDate>Thu, 06 Mar 2025 18:52:36 +0800</lastBuildDate>
         <category>java</category>
         <category>优化</category>
         <category>Markdown</category>
         <category>字符串</category>
         <category>mybatis-plus</category>
         <category>java面试题</category>
+        <category>踩坑</category>
+        <category>软件</category>
+        <category>app</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/</guid>
+            <title>软件问题</title>
+            <link>http://example.com/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/</link>
+            <category>软件</category>
+            <category>app</category>
+            <pubDate>Thu, 06 Mar 2025 18:52:36 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;微信：pc 端登录无法加载（关闭防火墙）&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2025/03/06/%E8%B8%A9%E5%9D%91/</guid>
             <title>踩坑</title>
             <link>http://example.com/2025/03/06/%E8%B8%A9%E5%9D%91/</link>
+            <category>java</category>
+            <category>踩坑</category>
             <pubDate>Thu, 06 Mar 2025 10:09:08 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;1. 忘记读到 buf 数组。&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;byte&lt;/span&gt;[] buf = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;byte&lt;/span&gt;[&lt;span class=&#34;number&#34;&gt;1024&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; ((len = inputStream.read(buf)) != -&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  out.write(buf, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, len);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
