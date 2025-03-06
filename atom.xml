@@ -17,7 +17,14 @@
         <content type="html">&lt;p&gt;1. 忘记读到 buf 数组。&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;byte&lt;/span&gt;[] buf = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;byte&lt;/span&gt;[&lt;span class=&#34;number&#34;&gt;1024&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; ((len = inputStream.read(buf)) != -&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  out.write(buf, &lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;, len);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;2. 压缩包下载确保流的关闭，否则压缩包无法打开。&lt;br&gt;
-3. 输出流可以 flush 刷新一下，确保文件全部写入。&lt;/p&gt;
+3. 输出流可以 flush 刷新一下，确保文件全部写入。&lt;br&gt;
+4.Integer 在 controller 能接受 Long 数，但在 mapper 查询出问题。&lt;br&gt;
+5. 用 Map 接收 requestBody 时，若 Map 的值为 String，传过来的参数要带上双引号 &amp;quot;&amp;quot;。&lt;br&gt;
+6. 当前端既可以传 Integer 又可以传 Long，后端用 Long 接收。但当传 Integer 时，报错 Integer 转 Long 出问题。（解决：toString 后用 Long.valueOf）&lt;br&gt;
+7. 文件下载出现文件名为 response.bin，因为：中文名没有编码。&lt;br&gt;
+为什么压缩文件的时候没有指定编码，没有出现这个问题？&lt;br&gt;
+8.postman 传 json 空格不同问题。&lt;br&gt;
+(空格、NBSP 造成的 JSON 解析失败问题)[&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=&#34;&gt;https://blog.csdn.net/Gdeer/article/details/101061616&lt;/span&gt;]&lt;/p&gt;
 </content>
         <updated>2025-03-06T02:09:08.000Z</updated>
     </entry>
