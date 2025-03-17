@@ -76,7 +76,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>469</span>
+    <span>985</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?980642"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?673165"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?544978"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?303047"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?474383"></li>
-          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?685518"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?308835"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?889735"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?877442"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?977637"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?301097"></li>
+          <li class="item" data-background-image="http://www.98qy.com/sjbz/api.php?595145"></li>
         </ul>
       </div>
     </header>
@@ -181,7 +181,14 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 7. 文件下载出现文件名为 response.bin，因为：中文名没有编码。<br>
 为什么压缩文件的时候没有指定编码，没有出现这个问题？<br>
 8.postman 传 json 空格不同问题。<br>
-<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=">空格、NBSP 造成的 JSON 解析失败问题</span></p>
+<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=">空格、NBSP 造成的 JSON 解析失败问题</span><br>
+ 9. 带多层目录的 zip 下载没出现文件名重复的错误（之前实现最简单的多个文件压缩成一个压缩包，文件名重复报错）<br>
+10.springboot 的参数校验 validate，PathVariable 的 required=true 校验可能先于 @Notnull？<br>
+11. 用来校验路径参数不能为空，否则不填路径参数直接到其他的请求返回 404 了： <code>@GetMapping(value = &#123;&quot;/userList/&#123;subscriber&#125;&quot;, &quot;/userList&quot;&#125;)</code> <br>
+ 12.requestbod 定义的对象含有 Map&lt;String, Object&gt;。对象对应的类需要有无参构造和全参构造器。<br>
+13. <code>String.chatAt()</code>  获得的是一个 char 字符，可以直接用 int 表示，但为 ascill 码。<br>
+14.CMS 垃圾回收器，第 4 个阶段并发清理，和用户线程并发执行，这时用户线程不会<br>
+ 15.（疑问）尚硅谷 jvm2020 版 P198，视频说 jdk7 的 eden 区放不下，gc 后再将新对象放 eden 区；而 jdk8 是直接放 old 区。但我实践后 jdk8 和 jdk7 行为是一样的：都是直接放 eden 区。</p>
 
       <div class="tags">
           <a href="/tags/java/" rel="tag"><i class="ic i-tag"></i> java</a>
@@ -197,7 +204,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2025-03-06 18:53:28" itemprop="dateModified" datetime="2025-03-06T18:53:28+08:00">2025-03-06</time>
+    <time title="修改时间：2025-03-12 20:22:21" itemprop="dateModified" datetime="2025-03-12T20:22:21+08:00">2025-03-12</time>
   </span>
 </div>
 
@@ -252,7 +259,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
     <div class="item left">
       
 
-  <a href="/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?850229" title="注解Builder踩坑">
+  <a href="/2025/03/05/%E6%B3%A8%E8%A7%A3Builder%E8%B8%A9%E5%9D%91/" itemprop="url" rel="prev" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?213648" title="注解Builder踩坑">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 踩坑</span>
   <h3>注解Builder踩坑</h3>
@@ -262,7 +269,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
     <div class="item right">
       
 
-  <a href="/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?251509" title="软件问题">
+  <a href="/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/" itemprop="url" rel="next" data-background-image="http:&#x2F;&#x2F;www.98qy.com&#x2F;sjbz&#x2F;api.php?519871" title="软件问题">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 问题</span>
   <h3>软件问题</h3>
@@ -301,7 +308,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">7</span>
+        <span class="count">8</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -407,24 +414,12 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/java/" title="分类于 java">java</a>
+<a href="/categories/%E8%B8%A9%E5%9D%91/" title="分类于 踩坑">踩坑</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%B8%A9%E5%9D%91/java/" title="分类于 java">java</a>
 </div>
 
-    <span><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" title="java代码优化">java代码优化</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E8%BD%AF%E4%BB%B6/" title="分类于 软件">软件</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%BD%AF%E4%BB%B6/app/" title="分类于 app">app</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/%E8%BD%AF%E4%BB%B6/app/%E9%97%AE%E9%A2%98/" title="分类于 问题">问题</a>
-</div>
-
-    <span><a href="/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/" title="软件问题">软件问题</a></span>
+    <span><a href="/2025/03/06/%E8%B8%A9%E5%9D%91/" title="踩坑">踩坑</a></span>
   </li>
 
       
@@ -457,12 +452,24 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E8%B8%A9%E5%9D%91/" title="分类于 踩坑">踩坑</a>
+<a href="/categories/%E8%BD%AF%E4%BB%B6/" title="分类于 软件">软件</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/%E8%B8%A9%E5%9D%91/java/" title="分类于 java">java</a>
+<a href="/categories/%E8%BD%AF%E4%BB%B6/app/" title="分类于 app">app</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/%E8%BD%AF%E4%BB%B6/app/%E9%97%AE%E9%A2%98/" title="分类于 问题">问题</a>
 </div>
 
-    <span><a href="/2025/03/06/%E8%B8%A9%E5%9D%91/" title="踩坑">踩坑</a></span>
+    <span><a href="/2025/03/06/%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98/" title="软件问题">软件问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 java">java</a>
+</div>
+
+    <span><a href="/2025/03/01/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" title="java代码优化">java代码优化</a></span>
   </li>
 
       
@@ -473,6 +480,15 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
 </div>
 
     <span><a href="/2025/03/03/mybatis-plus%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%BAis-active/" title="mybatis-plus逻辑删除字段为is_active">mybatis-plus逻辑删除字段为is_active</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/03/17/java-oi/" title="java oi">java oi</a></span>
   </li>
 
   </ul>
@@ -497,7 +513,7 @@ Tang Yang = Coding之旅 = UnLess I do not want to Win otherwise nothing makes m
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">4k 字</span>
+    <span title="站点总字数">5k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">

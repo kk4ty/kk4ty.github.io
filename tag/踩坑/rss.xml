@@ -33,7 +33,14 @@
 7. 文件下载出现文件名为 response.bin，因为：中文名没有编码。&lt;br&gt;
 为什么压缩文件的时候没有指定编码，没有出现这个问题？&lt;br&gt;
 8.postman 传 json 空格不同问题。&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=&#34;&gt;空格、NBSP 造成的 JSON 解析失败问题&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0dkZWVyL2FydGljbGUvZGV0YWlscy8xMDEwNjE2MTY=&#34;&gt;空格、NBSP 造成的 JSON 解析失败问题&lt;/span&gt;&lt;br&gt;
+ 9. 带多层目录的 zip 下载没出现文件名重复的错误（之前实现最简单的多个文件压缩成一个压缩包，文件名重复报错）&lt;br&gt;
+10.springboot 的参数校验 validate，PathVariable 的 required=true 校验可能先于 @Notnull？&lt;br&gt;
+11. 用来校验路径参数不能为空，否则不填路径参数直接到其他的请求返回 404 了： &lt;code&gt;@GetMapping(value = &amp;#123;&amp;quot;/userList/&amp;#123;subscriber&amp;#125;&amp;quot;, &amp;quot;/userList&amp;quot;&amp;#125;)&lt;/code&gt; &lt;br&gt;
+ 12.requestbod 定义的对象含有 Map&amp;lt;String, Object&amp;gt;。对象对应的类需要有无参构造和全参构造器。&lt;br&gt;
+13. &lt;code&gt;String.chatAt()&lt;/code&gt;  获得的是一个 char 字符，可以直接用 int 表示，但为 ascill 码。&lt;br&gt;
+14.CMS 垃圾回收器，第 4 个阶段并发清理，和用户线程并发执行，这时用户线程不会&lt;br&gt;
+ 15.（疑问）尚硅谷 jvm2020 版 P198，视频说 jdk7 的 eden 区放不下，gc 后再将新对象放 eden 区；而 jdk8 是直接放 old 区。但我实践后 jdk8 和 jdk7 行为是一样的：都是直接放 eden 区。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
