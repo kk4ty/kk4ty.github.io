@@ -17,7 +17,9 @@
         <id>http://example.com/2025/03/17/java-oi/</id>
         <title>java oi</title>
         <link rel="alternate" href="http://example.com/2025/03/17/java-oi/"/>
-        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vaS53aWtpL2xhbmcvamF2YS1wcm8v&#34;&gt;java 进阶&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vaS53aWtpL2xhbmcvamF2YS1wcm8v&#34;&gt;java 进阶&lt;/span&gt;&lt;br&gt;
+坑点：&lt;br&gt;
+1. 使用 P &lt;code&gt;rintWriter&lt;/code&gt;  时，不要在创建对象时使用自动刷新，即： &lt;code&gt;new PrintWriter(System.out, true)&lt;/code&gt; ，容易导致 MLE。在全部输出完后再统一 &lt;code&gt;flush&lt;/code&gt;  保证内容全部输出。&lt;/p&gt;
 </content>
         <updated>2025-03-17T13:40:20.000Z</updated>
     </entry>

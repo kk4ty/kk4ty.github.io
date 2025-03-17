@@ -9,7 +9,7 @@
             "url": "http://example.com/2025/03/17/java-oi/",
             "title": "java oi",
             "date_published": "2025-03-17T13:40:20.000Z",
-            "content_html": "<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9vaS53aWtpL2xhbmcvamF2YS1wcm8v\">java 进阶</span></p>\n",
+            "content_html": "<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly9vaS53aWtpL2xhbmcvamF2YS1wcm8v\">java 进阶</span><br>\n坑点：<br>\n1. 使用 P <code>rintWriter</code>  时，不要在创建对象时使用自动刷新，即： <code>new PrintWriter(System.out, true)</code> ，容易导致 MLE。在全部输出完后再统一 <code>flush</code>  保证内容全部输出。</p>\n",
             "tags": []
         },
         {
