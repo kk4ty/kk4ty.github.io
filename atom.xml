@@ -3,7 +3,7 @@
     <id>http://example.com</id>
     <title>Coding之旅</title>
     <link href="http://example.com" />
-    <updated>2025-03-17T13:40:20.000Z</updated>
+    <updated>2025-04-02T07:54:28.000Z</updated>
     <category term="java" />
     <category term="优化" />
     <category term="Markdown" />
@@ -14,12 +14,34 @@
     <category term="软件" />
     <category term="app" />
     <entry>
+        <id>http://example.com/2025/04/02/json%E4%BD%BF%E7%94%A8/</id>
+        <title>json使用</title>
+        <link rel="alternate" href="http://example.com/2025/04/02/json%E4%BD%BF%E7%94%A8/"/>
+        <content type="html">&lt;ol&gt;
+&lt;li&gt;hutool 包使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Data&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;RedisData&lt;/span&gt; &amp;lt;T&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; LocalDateTime expireTime;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; T data;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;上述无法一次转为对应的泛型类，报错： &lt;code&gt;cn.hutool.json.JSONObject cannot be cast to com.hmdp.entity.Shop&lt;/code&gt;&lt;/p&gt;
+</content>
+        <updated>2025-04-02T07:54:28.000Z</updated>
+    </entry>
+    <entry>
         <id>http://example.com/2025/03/17/java-oi/</id>
         <title>java oi</title>
         <link rel="alternate" href="http://example.com/2025/03/17/java-oi/"/>
         <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9vaS53aWtpL2xhbmcvamF2YS1wcm8v&#34;&gt;java 进阶&lt;/span&gt;&lt;br&gt;
 坑点：&lt;br&gt;
-1. 使用 P &lt;code&gt;rintWriter&lt;/code&gt;  时，不要在创建对象时使用自动刷新，即： &lt;code&gt;new PrintWriter(System.out, true)&lt;/code&gt; ，容易导致 MLE。在全部输出完后再统一 &lt;code&gt;flush&lt;/code&gt;  保证内容全部输出。&lt;/p&gt;
+1. 使用 P &lt;code&gt;rintWriter&lt;/code&gt;  时，不要在创建对象时使用自动刷新，即： &lt;code&gt;new PrintWriter(System.out, true)&lt;/code&gt; ，容易导致 MLE。在全部输出完后再统一 &lt;code&gt;flush&lt;/code&gt;  保证内容全部输出。&lt;br&gt;
+使用：&lt;br&gt;
+1.vector&lt;br&gt;
+ArrayList: 动态生长的数组&lt;br&gt;
+ LinkedList: 双链表&lt;br&gt;
+ 2.deque:&lt;br&gt;
+deque: 接口&lt;br&gt;
+ LinkedList: 链表模拟&lt;br&gt;
+ ArrayDeque: 数组模拟&lt;br&gt;
+ 3.stack：Stack 和 Vector 都是线程安全的，其实多数情况下并不需要做到线程安全，因此没有必要使用 Stack。毕竟保证线程安全需要上锁，有额外的系统开销。&lt;br&gt;
+4.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucnVub29iLmNvbS93M2Nub3RlL3JlbWFpbmRlci1hbmQtdGhlLW1vZHVsby5odG1s&#34;&gt; 取余和取模的区别&lt;/span&gt;&lt;/p&gt;
 </content>
         <updated>2025-03-17T13:40:20.000Z</updated>
     </entry>
@@ -285,6 +307,7 @@ M834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/s
 &lt;/blockquote&gt;
 &lt;p&gt;3. 改进的空间：在实际开发中，如果基本确定要前前后后添加的字符串长度不高于某个限定值 highLevel 的情况下，建议使用构造器实例化：&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;type&#34;&gt;StringBuilder&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;StringBuilder&lt;/span&gt;(highLevel);&lt;span class=&#34;comment&#34;&gt;//new char[highLevel]&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;4. &lt;code&gt;int&lt;/code&gt;  类型的自增，字节码指令只需要一条，其余的（double）需要额外压入 1 再相加。&lt;/p&gt;
 </content>
         <category term="java" />
         <category term="优化" />
